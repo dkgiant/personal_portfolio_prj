@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
 </head>
 <body>
     <h1>Projects:</h1>
+    <a href="{% static 'portfolio/HomeImage.jpg' %}">link</a>
+    <img src="{% static 'portfolio/HomeImage.jpg' %}" alt="" height="200">
     {% for project in projects %}
         {{project.title}}
         <br>
