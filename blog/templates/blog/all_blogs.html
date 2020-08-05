@@ -9,5 +9,12 @@
 </head>
 <body>
     <h1>blogs:</h1>
+    {% for blog in blogs %}
+        {{blog.title}}
+        <br>
+        {{blog.date_created}}
+        <br>
+        {{blog.description}}
+    {% endfor %}
 </body>
 </html>
