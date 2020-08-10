@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mtt$_w2xyqcs#6&4dx&pvxyxnhw%s-(t%jfh(zzla_5*+uo=my'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['dhgiant.pythonanywhere.com']
 
@@ -116,3 +116,8 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/UPLOAD/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'UPLOAD')
+
+try:
+    from .local_setting import *
+except ImportError:
+    print('no file local_settings')
